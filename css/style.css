@@ -42,3 +42,28 @@ body {
   padding: 10px;
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  #arena {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #gorila {
+    width: 80px;
+  }
+
+  .humano {
+    width: 20px;
+    height: 20px;
+  }
+
+  #controles button {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  #log {
+    font-size: 0.9em;
+  }
+}
