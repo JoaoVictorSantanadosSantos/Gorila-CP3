@@ -92,3 +92,13 @@ function verificarFim() {
 function desativarBotoes() {
   document.querySelectorAll('button').forEach(btn => btn.disabled = true);
 }
+
+function atacar() {
+  const audio = new Audio('assets/som-ataque.mp3');
+  audio.play();
+
+  const gorila = document.getElementById('gorila');
+  gorila.classList.add('animar');
+  setTimeout(() => gorila.classList.remove('animar'), 300);
+
+}
