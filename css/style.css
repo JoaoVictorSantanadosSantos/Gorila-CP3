@@ -1,6 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #4CAF50, #2E7D32); /* tema selva */
+  color: white;
   text-align: center;
   padding: 20px;
 }
