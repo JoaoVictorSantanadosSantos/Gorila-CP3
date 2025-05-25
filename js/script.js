@@ -61,3 +61,20 @@ function curar() {
 
 document.getElementById('btnDefender').addEventListener('click', defender);
 document.getElementById('btnCurar').addEventListener('click', curar);
+
+function salvarEstado() {
+  localStorage.setItem('estadoJogo', JSON.stringify({ vidaGorila, humanos }));
+}
+
+function carregarEstado() {
+  const salvo = localStorage.getItem('estadoJogo');
+  if (salvo) {
+    const data = JSON.parse(salvo);
+    vidaGorila = data.vidaGorila;
+    for (let i = 0; i < humanos.length; i++) {
+      humanos[i].vivo = data.humanos[i].vivo;
+    }
+  }
+}
+
+carregarEstado();
