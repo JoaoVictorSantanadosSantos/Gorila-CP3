@@ -48,3 +48,16 @@ function turnoHumanos() {
 }
 
 setInterval(turnoHumanos, 3000);
+
+function defender() {
+  registrarLog("🛡️ O gorila está em posição de defesa!");
+}
+
+function curar() {
+  vidaGorila = Math.min(vidaGorila + 10, 100);
+  registrarLog("🍌 O gorila comeu uma banana e recuperou 10 de vida.");
+  atualizarStatus();
+}
+
+document.getElementById('btnDefender').addEventListener('click', defender);
+document.getElementById('btnCurar').addEventListener('click', curar);
