@@ -37,3 +37,14 @@ function registrarLog(msg) {
 
 desenharHumanos();
 atualizarStatus();
+
+function turnoHumanos() {
+  const vivos = humanos.filter(h => h.vivo).length;
+  const dano = Math.floor(Math.random() * vivos * 0.1);
+  vidaGorila = Math.max(vidaGorila - dano, 0);
+  registrarLog(`🧑 Humanos causaram ${dano} de dano!`);
+  atualizarStatus();
+  verificarFim();
+}
+
+setInterval(turnoHumanos, 3000);
