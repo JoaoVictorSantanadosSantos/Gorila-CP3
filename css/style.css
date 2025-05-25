@@ -10,13 +10,16 @@ body {
   padding: 20px;
 }
 
-
 #arena {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 #gorila {
@@ -32,38 +35,25 @@ body {
 #controles button {
   margin: 5px;
   padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#controles button:hover {
+  background-color: #388E3C;
 }
 
 #log {
   max-height: 200px;
   overflow-y: auto;
   background: #fff;
+  color: #000;
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
-}
-
-@media (max-width: 768px) {
-  #arena {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #gorila {
-    width: 80px;
-  }
-
-  .humano {
-    width: 20px;
-    height: 20px;
-  }
-
-  #controles button {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  #log {
-    font-size: 0.9em;
-  }
-}
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
