@@ -1,11 +1,15 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #4CAF50, #2E7D32); /* tema selva */
+  font-family: Arial, sans-serif;
+  background-image: url('../assets/floresta.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: white;
   text-align: center;
   padding: 20px;
 }
+
 
 #arena {
   display: flex;
