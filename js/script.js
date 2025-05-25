@@ -78,3 +78,17 @@ function carregarEstado() {
 }
 
 carregarEstado();
+
+function verificarFim() {
+  if (vidaGorila <= 0) {
+    registrarLog("💀 O gorila foi derrotado.");
+    desativarBotoes();
+  } else if (humanos.every(h => !h.vivo)) {
+    registrarLog("🏆 O gorila venceu! Todos os humanos foram derrotados.");
+    desativarBotoes();
+  }
+}
+
+function desativarBotoes() {
+  document.querySelectorAll('button').forEach(btn => btn.disabled = true);
+}
